@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Thông tin chuyến bay</title>
+    <meta name="author" content="Hồ Quý Đô">
+    <meta name="description" content="Thiết kế web">
+    <meta name="keywords" content="20CT2101, Thiết kế web, Công nghệ thông tin, Đại học Đà Lạt">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://dlu.edu.vn/wp-content/uploads/2023/06/cropped-DLU-Logo-full-New-32x32.png" sizes="32x32">
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+	text-align: center;
+      }
+    </style>
+    <style>
+	tr:nth-child(even) {
+	background-color: #B0C4DE;
+      }
+    </style>
+    <style>
+	body {
+	font-family: 'Arial', sans-serif;
+	}
+
+	.topnav {
+	overflow: hidden;
+	background-color: #333;
+	}
+
+	.topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	}
+	
+	.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+	}
+
+	.topnav a active {
+	background-color: #04AA6D;
+	color: white;
+	}
+</style>
+  </head>
+  <body>
+	<div class="topnav">
+		<a href="index.html">Trang chủ </a>
+		<a class="active" href="flights.html">Thông tin chuyến bay</a>
+		<a href="timetable.html">Thời khóa biểu </a>
+		<a href="recipes.html">Công thức nấu ăn ngon </a>
+	</div>
+    <table style="width:100%">
+      <tr>
+        <th>Kế hoạch<br>(Scheduled)</th>
+        <th>Dự kiến<br>(Estimated)</th>
+        <th>Nơi đến<br>(Destination)</th>
+        <th>Hãng<br>(Airlines)</th>
+        <th>Chuyến bay<br>(Flight)</th>
+        <th>Cửa<br>(Gate)</th>
+        <th>Ghi chú<br>(Remarks)</th>
+      </tr>
+      <!-- Flight 1 -->
+      <tr>
+        <td>05:50</td>
+        <td></td>
+        <td>Tuy Hòa</td>
+        <td>
+          <a href="https://www.vietjetair.com/vi">
+            <img src="vietjet.png" alt="Logo Vietjet Airlines" style="width:70px;height:25px;">
+          </a>
+        </td>
+        <td>VJ 206</td>
+        <td>12</td>
+        <td>Cancalled</td>
+      </tr>
+      <!-- Flight 2 -->
+      <tr>
+        <td>05:55</td>
+        <td>14:15</td>
+        <td>Phú Quốc</td>
+        <td><a href="https://www.bambooairways.com/vn/vi"><img src="bamboo.png" alt="Logo Bamboo Airlines" style="width:70px;height:25px;"></a></td>
+        <td>QH 1525</td>
+        <td>10</td>
+        <td>Delayed</td>
+      </tr>
+      <!-- Flight 3 -->
+      <tr>
+        <td>06:05</td>
+        <td>11:20</td>
+        <td>Phú Quốc</td>
+        <td><a href="https://www.pacificairlines.com/"><img src="pacific.png" alt="Logo Pacific Airlines" style="width:95px;height:25px;"></a></td>
+        <td>VN 6511</td>
+        <td>2</td>
+        <td>Delayed</td>
+      </tr>
+      <!-- Flight 4 -->
+      <tr>
+        <td>06:50</td>
+        <td></td>
+        <td>Phú Quốc</td>
+        <td><a href="https://www.vietnamairlines.com/vn/vi/home"><img src="vietnam.png" alt="Logo Vietnam Airlines" style="width:90px;height:25px;"></a></td>
+        <td>VN 1823</td>
+        <td>10</td>
+        <td>Delayed</td>
+      </tr>
+      <!-- Flight 5 -->
+      <tr>
+        <td>07:00</td>
+        <td></td>
+        <td>Côn Đảo</td>
+        <td><a href="https://www.vietnamairlines.com/vi-ph/duong-bay-moi-vasco"><img src="vasco.png" alt="Logo Vasco Airlines" style="width:65px;height:25px;"></a></td>
+        <td>0V 8059</td>
+        <td>3</td>
+        <td>Delayed</td>
+      </tr>
+      <!-- Flight 6 -->
+      <tr>
+        <td>07:25</td>
+        <td>10:30</td>
+        <td>Phú Quốc</td>
+        <td><a href="https://www.pacificairlines.com/"><img src="pacific.png" alt="Logo Pacific Airlines" style="width:95px;height:25px;"></a></td>
+        <td>VN 6513</td>
+        <td>2</td>
+        <td>Boarding</td>
+      </tr>
+      <!-- Flight 7 -->
+      <tr>
+        <td>07:30</td>
+        <td>13:25</td>
+        <td>Côn Đảo</td>
+        <td><a href="https://www.vietnamairlines.com/vn/vi/home"><img src="vietnam.png" alt="Logo Vietnam Airlines" style="width:95px;height:25px;"></a></td>
+        <td>VN 1865</td>
+        <td>9</td>
+        <td>Delayed</td>
+      </tr>
+      <!-- Flight 8 -->
+      <tr>
+        <td>08:55</td>
+        <td>13:35</td>
+        <td>Côn Đảo</td>
+        <td><a href="https://www.vietnamairlines.com/vn/vi/home"><img src="vietnam.png" alt="Logo Vietnam Airlines" style="width:95px;height:25px;"></a></td>
+        <td>VN 1857</td>
+        <td>9</td>
+        <td>Delayed</td>
+      </tr>
+      <!-- Flight 9 -->
+      <tr>
+        <td>10:10</td>
+        <td>13:50</td>
+        <td>Phú Quốc</td>
+        <td><a href="https://www.pacificairlines.com/"><img src="pacific.png" alt="Logo Pacific Airlines" style="width:95px;height:25px;"></a></td>
+        <td>BL 6527</td>
+        <td>3</td>
+        <td>Delayed</td>
+      </tr>
+      <!-- Flight 10 -->
+      <tr>
+        <td>10:10</td>
+        <td>14:10</td>
+        <td>Phú Quốc</td>
+        <td><a href="https://www.vietnamairlines.com/vn/vi/home"><img src="vietnam.png" alt="Logo Vietnam Airlines" style="width:95px;height:25px;"></a></td>
+        <td>VN 1827</td>
+        <td>15</td>
+        <td>Delayed</td>
+      </tr>
+    </table>
+  </body>
+</html>
