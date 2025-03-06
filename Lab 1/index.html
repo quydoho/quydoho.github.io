@@ -8,10 +8,64 @@
 		<meta name="keywords" content="20CT2101, Thiết kế web, Công nghệ thông tin, Đại học Đà Lạt">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="https://dlu.edu.vn/wp-content/uploads/2023/06/cropped-DLU-Logo-full-New-32x32.png" sizes="32x32">
+		<style>
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+    }
+  
+    nav {
+      background: #333;
+      overflow: hidden;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      flex: 1;
+      position: relative;
+    }
+    nav ul li a {
+      display: block;
+      padding: 14px 16px;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background: #575757;
+    }
+  
+    nav ul li a.active {
+      background: #4CAF50;
+    }
+   
+    nav ul li a::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #4CAF50;
+      transition: width 0.3s;
+      margin: 5px auto 0;
+    }
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+  	</style>
+
 	</head>
 	<body>
 		<nav> 
-			<a href="index.html">Trang chủ </a> | <a href="Gioithieu.html">Giới thiệu</a>| <a href="Lichsu.html">Lịch sử</a>
+			<a href="index.html" class="active">Trang chủ </a> | <a href="Gioithieu.html">Giới thiệu</a>| <a href="Lichsu.html">Lịch sử</a>
 
 		</nav>
 		<br>
