@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký - An's Tech Store</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">An's Tech Store</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="products.html">Sản phẩm</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="cart.html">🛒 Giỏ hàng</a></li>
+                <li><a href="login.html">Đăng nhập</a></li>
+                <li><a href="register.html" class="active">Đăng ký</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Form đăng ký -->
+    <div class="register-container">
+        <h2>📝 Đăng Ký</h2>
+        <form id="register-form">
+            <div class="input-group">
+                <label for="name">👤 Họ và Tên:</label>
+                <input type="text" id="name" placeholder="Nhập họ và tên" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">📧 Email:</label>
+                <input type="email" id="email" placeholder="Nhập email của bạn" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">🔒 Mật khẩu:</label>
+                <input type="password" id="password" placeholder="Nhập mật khẩu" required>
+            </div>
+
+            <div class="input-group">
+                <label for="confirm-password">🔄 Nhập lại mật khẩu:</label>
+                <input type="password" id="confirm-password" placeholder="Nhập lại mật khẩu" required>
+            </div>
+
+            <button type="submit">Đăng ký</button>
+
+            <p class="login-link">Đã có tài khoản? <a href="login.html">Đăng nhập ngay</a></p>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 An's Tech Store. All rights reserved.</p>
+    </footer>
+
+    <script src="register.js"></script>
+</body>
+</html>
