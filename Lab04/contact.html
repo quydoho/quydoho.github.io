@@ -1,0 +1,60 @@
+<!DOCTYPE>
+<html>
+	<head>
+  		<meta charset="UTF-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<title>Liên hệ</title>
+	</head>
+
+	<body>
+		<form method="post" action="contact.php">
+			<table border="2" cellspacing="5px">
+				<tr>
+					<td colspan="2">Liên hệ với chúng tôi</td>
+				</tr>
+				<tr>
+					<td class="td150 required">Nhập họ tên</td>
+					<td>
+						<input type="text" name="fullname" required>
+					</td>
+				</tr>
+				<tr>
+					<td class="required">Nhập địa chỉ Email</td>
+					<td>
+						<input type="email" name="email" required>
+					</td>
+				</tr>
+				<tr>
+					<td class="required">Nhập số điện thoại</td>
+					<td>
+						<input type="text" name="phone" required>
+					</td>
+				</tr>
+				<tr>
+					<td>Nhập địa chỉ</td>
+					<td><input type="text" name="address"></td>
+				</tr>
+				<tr>
+					<td class="required">Chọn chủ đề</td>
+					<td>
+						<select name="topic" required>
+							<option value="hoidap">Hỏi đáp</option>
+							<option value="gopy">Góp ý</option>
+							<option value="khieunai">Khiếu nại</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="required">Nhập nội dung</td>
+					<td><textarea name="content" row="10" required></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="center">
+						<button type="reset" class="btn-reset">Nhập lại</button>
+						<button type="submit" class="btn-submit">Gửi</button>
+					</td>	
+				</tr>
+			</table>
+	</body>
+</html>
