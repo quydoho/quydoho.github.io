@@ -97,6 +97,11 @@ table.sub-table {
 	margin: auto;
 }
 
+.button-container {
+    text-align: center; 
+    padding-top: 10px;
+}
+
 .column {
 	flex: 1;
 	padding: 20px;
