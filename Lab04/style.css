@@ -72,6 +72,7 @@ input[type="text"], input[type="password"], input[type="email"], textarea {
 
 .btn-reset {
 	background-color: #dc3545;
+	margin-right: 10px;
 }
 
 .btn-forget {
