@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài thực hành 8</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+    }
+  
+    nav {
+      background: #333;
+      overflow: hidden;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      flex: 1;
+      position: relative;
+    }
+    nav ul li a {
+      display: block;
+      padding: 14px 16px;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      transition: background 0.3s ease;
+    }
+    nav ul li a:hover {
+      background: #575757;
+    }
+    nav ul li a.active {
+      background: #4CAF50;
+    }
+    nav ul li a::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #4CAF50;
+      transition: width 0.3s;
+      margin: 5px auto 0;
+    }
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <br>
+  <h1 style="text-align: center; color: blue;">Bài thực hành 8</h1><br><hr>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Trang Chủ</a></li>
+      <li><a href="invitation/index.html">Thiệp mời tân gia</a></li>
+      <li><a href="clock/index.html">Đồng hồ</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const menuLinks = document.querySelectorAll('nav ul li a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        menuLinks.forEach(item => item.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
