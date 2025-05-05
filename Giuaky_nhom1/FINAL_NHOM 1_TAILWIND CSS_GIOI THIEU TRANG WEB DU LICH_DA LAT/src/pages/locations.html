@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DaLatTravel - Giới thiệu</title>
+    <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
+    
+    <!-- Google Fonts (không dùng font từ Google cho mục đích này) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/input.css" />
+    <link rel="stylesheet" href="../../dist/output.css" />
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .animate-fade-in { animation: fadeIn 1s ease-out; }
+        @keyframes inputFocus { from { transform: translateY(0); } to { transform: translateY(-2px); } }
+        .animate-input:focus { animation: inputFocus 0.2s ease-in-out forwards; }
+        
+        /* Global font: nội dung dùng Arial, chỉ tiêu đề (h1-h6) dùng Times New Roman */
+        body {
+          font-family: Arial, sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          font-family: "Times New Roman", Times, serif;
+        }
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+        display: none;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- header section  -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+      <nav class="max-w-[1440px] container mx-auto px-4 py-4 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center gap-2 text-2xl font-bold">
+          <img src="../assets/images/logo.png" alt="DaLatTravel" class="h-8"> 
+          <a href="index.html" class="text-gray-600 hover:text-gray-900">DaLatTravel</a>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="hidden space-x-8 md:flex">
+          <a href="#home" class="text-gray-600 hover:text-gray-900">Trang chủ</a>
+          <a href="#fall" class="text-gray-600 hover:text-gray-900">Thác nước Đà Lạt</a>
+          <a href="#lake" class="text-gray-600 hover:text-gray-900">Thung lũng Đà Lạt</a>
+          <a href="#located" class="text-gray-600 hover:text-gray-900">Khu du lịch Đà Lạt mới</a>
+          <a href="#special" class="text-gray-600 hover:text-gray-900">Địa điểm nổi bật</a>
+        </div>
+
+        <!-- Auth Buttons -->
+        <div class="space-x-4">
+          <button class="text-gray-600 hover:text-gray-900">Sign In</button>
+          <button class="px-4 py-2 text-white bg-red-500 rounded-full">Sign Up</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- hero section  -->
+    <section class="max-w-[1440px] container mx-auto px-4 py-24 flex flex-col md:flex-row items-center gap-12" id="home"
+      style="background-image: url('../assets/images/background2.jpg'); background-size: cover; background-position: center;">
+      <!-- Left Content -->
+      <div class="w-full mb-8 space-y-8 md:mb-0">
+        <h1 class="text-4xl font-bold leading-tight text-black lg:text-5xl md:text-5xl" style="text-align: center;">
+          Giới thiệu địa điểm du lịch Đà Lạt
+        </h1>
+      </div>
+      <!-- Testimonials Slider -->
+      <div class="swiper testimonialSwiper">
+        <div class="swiper-wrapper">
+          <!-- Testimonials will be inserted here by JavaScript -->
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="flex items-center justify-between mt-12">
+          <!-- Pagination Dots -->
+          <div class="swiper-pagination !relative !bottom-0 !w-auto"></div>
+          
+          <!-- Navigation Arrows -->
+          <div class="flex gap-4">
+            <div class="swiper-button-prev !static !w-[60px] !h-[60px] flex items-center justify-center rounded-full border-2 border-[#F53855] text-[#F53855] hover:bg-red-200 hover:text-white transition-all">
+              <img src="../assets/images/arrow-left.png" alt="arrow-left" class="w-6 h-6">
+            </div>
+            <div class="swiper-button-next !static !w-[60px] !h-[60px] flex items-center justify-center rounded-full bg-[#F53855] text-white hover:opacity-90 transition-all">
+              <img src="../assets/images/arrow-right.png" alt="arrow-right" class="w-6 h-6">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Địa điểm du lịch: Thác nước Đà Lạt -->
+    <section class="max-w-[1440px] container mx-auto px-4 py-24" id="fall">
+      <div class="flex flex-col items-center gap-12 md:flex-row">
+        <h1 class="text-3xl font-bold leading-tight text-black lg:text-4xl md:text-4xl">THÁC NƯỚC ĐÀ LẠT</h1>
+      </div>
+
+      <!-- Danh sách thác nước nổi bật -->
+      <section class="max-w-[1440px] container mx-auto px-4 py-12">
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Card 1: Thác Voi -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/thac-voi.jpg" alt="Thác Voi" class="object-cover w-full h-full">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Thác Voi</h3>
+              <p class="p-4 mb-4 text-gray-600 md:p-6">
+                Thác Voi hay có tên là thác Liêng Rơwoa, thuộc thị trấn Nam Ban, huyện Lâm Hà, Lâm Đồng, nằm trên dòng suối Cam Ly.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/thac-voi/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+          
+          <!-- Card 2: Thác Prenn -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/thac-prenn.jpg" alt="Thác Prenn" class="object-cover w-full h-full">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Thác Prenn</h3>
+              <p class="mb-4 text-gray-600">
+                Một thác nước yên bình nằm ngay cửa ngõ thành phố Đà Lạt, nổi bật với cảnh quan xanh mát và không gian cổ tích.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/thac-prenn/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+          
+          <!-- Card 3: Thác Pongour -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/thac-pongour.jpg" alt="Thác Pongour" class="object-cover w-full h-full">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Thác Pongour</h3>
+              <p class="mb-4 text-gray-600">
+                Được mệnh danh là "Nam thiên đệ nhất thác", Pongour sở hữu chiều cao hùng vĩ và cảnh sắc hùng tráng quanh năm.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/thac-bao-dai-thac-jraiblian/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+
+          <!-- Card 4: Thác Bảo Đại -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/thac-baodai.jpg" alt="Thác Bảo Đại" class="object-cover w-full h-full">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Thác Bảo Đại</h3>
+              <p class="mb-4 text-gray-600">
+                Thác Bảo Đại có tên gọi khác là Jráiblian có nghĩa là thác đá cao, vua Bảo Đại thường đi săn qua vùng này.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/thac-bao-dai-thac-jraiblian/" class="font-medium text-red-500 hover:underline"><br>Xem chi tiết →</a>
+            </div>
+          </div>
+
+          <!-- Card 5: Thác Hang Cọp -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/thac-hc.jpg" alt="Thác Hang Cọp" class="object-cover w-full h-full">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Thác Hang Cọp</h3>
+              <p class="mb-4 text-gray-600">
+                Thác Hang Cọp là một thác nước thuộc thành phố Đà Lạt. Thác có chiều cao khoảng 50 mét.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/thac-hang-cop-da-lat/" class="font-medium text-red-500 hover:underline"><br>Xem chi tiết →</a>
+            </div>
+          </div>
+
+          <!-- Card 6: Thác Cam Ly -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/thac-camly.jpg" alt="Thác Cam Ly" class="object-cover w-full h-full">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Thác Cam Ly</h3>
+              <p class="mb-4 text-gray-600">
+                Thác Cam Ly chỉ cách khu Hòa Bình khoảng 2km về phía tây, gần cuối đường Hoàng Văn Thụ. Đây là thác nước gần trung tâm thành phố Đà Lạt nhất.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/thac-cam-ly-da-lat/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Địa điểm du lịch: Thung Lũng Đà Lạt -->
+    <section class="max-w-[1440px] container mx-auto px-4 py-24" id="lake">
+      <div class="flex flex-col items-center gap-12 md:flex-row">
+        <h1 class="text-3xl font-bold leading-tight text-black lg:text-4xl md:text-4xl">THUNG LŨNG ĐÀ LẠT</h1>
+      </div>
+
+      <!-- Danh sách thung lũng nổi bật -->
+      <section class="max-w-[1440px] container mx-auto px-4 py-12">
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Card 7: Thung lũng Vàng -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/thunglungvang.jpg" alt="Thung lũng Vàng" class="object-cover w-full h-60">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Thung lũng Vàng</h3>
+              <p class="p-4 mb-4 text-gray-600 md:p-6">
+                Thung lũng vàng là khu du lịch thuộc địa phận thành phố Đà Lạt, tỉnh Lâm Đồng. Nằm cách trung tâm thành phố 15 km về hướng Tây Bắc.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/thung-lung-vang/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+          
+          <!-- Card 8: Thung lũng Tình Yêu -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/thunglungTY.jpg" alt="Thung lũng TY" width="370" height="415">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Thung lũng Tình Yêu</h3>
+              <p class="mb-4 text-gray-600">
+                Thung lũng Tình yêu là một trong những thắng cảnh thơ mộng nhất tại Đà Lạt, cách trung tâm thành phố khoảng 5 km về phía bắc.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/thung-lung-tinh-yeu/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+          
+          <!-- Card 9: Hồ Xuân Hương -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/hxh.jpg" alt="Hồ Xuân Hương" class="object-cover w-full h-60">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Hồ Xuân Hương</h3>
+              <p class="mb-4 text-gray-600">
+                Hồ Xuân Hương là một hồ nước đẹp nằm giữa trung tâm thành phố Đà Lạt. Hồ mang tên Hồ Xuân Hương.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/ho-xuan-huong/" class="font-medium text-red-500 hover:underline"><br><br>Xem chi tiết →</a>
+            </div>
+          </div>
+          
+          <!-- Card 10: Hồ Tuyền Lâm -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/htl.jpg" alt="Hồ Tuyền Lâm" class="object-cover w-full h-60">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Hồ Tuyền Lâm</h3>
+              <p class="mb-4 text-gray-600">
+                Hồ Tuyền Lâm là một hồ nước thuộc thành phố Đà Lạt. Đây là hồ nước ngọt rộng nhất Ðà Lạt, với diện tích khoảng 320 ha.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/ho-tuyen-lam-da-lat/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+          
+          <!-- Card 11: Hồ Than Thở -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/htt.jpg" alt="Hồ Than Thở" class="object-cover w-full h-60">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Hồ Than Thở</h3>
+              <p class="mb-4 text-gray-600">
+                Hồ Than Thở là một hồ nước tự nhiên thuộc thành phố Đà Lạt và cũng là một địa điểm du lịch của thành phố này.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/ho-than-tho/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+          
+          <!-- Card 12: Hồ Đan Kia – Suối Vàng -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/hdk.jpg" alt="Hồ Đan Kia – Suối Vàng" class="object-cover w-full h-60">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Hồ Đan Kia – Suối Vàng</h3>
+              <p class="mb-4 text-gray-600">
+                Hồ Suối Vàng là một thắng cảnh nổi tiếng của tỉnh Lâm Đồng, Việt Nam. Hồ nằm tại huyện Lạc Dương, cách thành phố Đà Lạt 20 km về phía Bắc.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/ho-dan-kia-suoi-vang/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Địa điểm du lịch: Khu du lịch Đà Lạt mới -->
+    <section class="max-w-[1440px] container mx-auto px-4 py-24" id="located">
+      <div class="flex flex-col items-center gap-12 md:flex-row">
+        <h1 class="text-3xl font-bold leading-tight text-black lg:text-4xl md:text-4xl">KHU DU LỊCH ĐÀ LẠT MỚI</h1>
+      </div>
+
+      <!-- Danh sách địa điểm du lịch mới -->
+      <section class="max-w-[1440px] container mx-auto px-4 py-12">
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Card 13: Khu du lịch Lá Phong-->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/kdllp.jpg" alt="Khu du lịch Lá Phong" width="350" height="415">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Khu du lịch Lá Phong</h3>
+              <p class="p-4 mb-4 text-gray-600 md:p-6">
+                Khu du lịch Lá Phong ở Đà Lạt có rừng lá phong tự trồng lớn nhất Việt Nam, và ngôi nhà 132 mái.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/khu-du-lich-la-phong-da-lat/" class="font-medium text-red-500 hover:underline"><br>Xem chi tiết →</a>
+            </div>
+          </div>
+          
+          <!-- Card 14: Đồi thông hai mộ -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/dthm.jpg" alt="Đồi thông hai mộ" width="350" height="415">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Đồi thông hai mộ</h3>
+              <p class="mb-4 text-gray-600">
+                Đồi thông hai mộ nằm bên bờ hồ Than Thở ở thành phố Đà Lạt. Nấm mồ của cuộc tình đau đớn nhất miền Nam trước 1975.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/doi-thong-hai-mo/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+          
+          <!-- Card 15: Làng Cù Lần -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/lcl.jpg" alt="Làng Cù Lần" width="320" height="350">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Làng Cù Lần</h3>
+              <p class="mb-4 text-gray-600">
+                Ngôi làng du lich nổi tiếng nằm cách trung tâm thành phố Đà Lạt khoảng 20 km, trong một thung lũng nhỏ và thu hút đông đảo khách ghé thăm mỗi ngày.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/lang-cu-lan-da-lat/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+          
+          <!-- Card 16: Sân Golf Đà Lạt -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/htl.jpg" alt="Sân Golf Đà Lạt" class="object-cover w-full h-full">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Sân Golf Đà Lạt</h3>
+              <p class="mb-4 text-gray-600">
+                Sân Golf Đà Lạt còn có tên gọi là Đồi Cù. Đồi Cù là khu đồi nằm giữa trung tâm thành phố Đà Lạt kế bên là Hồ Xuân Hương.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/san-golf-da-lat/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+          
+          <!-- Card 17: Trúc Lâm Viên -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/tlv.jpg" alt="Trúc Lâm Viên" class="object-cover w-full h-full">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Trúc Lâm Viên</h3>
+              <p class="mb-4 text-gray-600">
+                Khu du lịch Trúc Lâm Viên hay còn gọi là Trần Lê Gia Trang tọa lạc tại bên cạnh đường cao tốc nối Đà Lạt và sân bay Liên Khương.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/truc-lam-vien-da-lat/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+          
+          <!-- Card 18: Cáp Treo Đà Lạt – Đồi Robin -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/ct.jpg" alt="Cáp Treo Đà Lạt – Đồi Robin" class="object-cover w-full h-full">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Cáp Treo Đà Lạt – Đồi Robin</h3>
+              <p class="mb-4 text-gray-600">
+                Khu du lịch cáp treo Đà Lạt nằm ở cuối đường Đống Đa, trên ngọn đồi Robin. Trước năm 1975, đồi này là trận địa pháo Tân Lạc.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/cap-treo-da-lat/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Địa điểm du lịch: Địa điểm nổi bật -->
+    <section class="max-w-[1440px] container mx-auto px-4 py-24" id="special">
+      <div class="flex flex-col items-center gap-12 md:flex-row">
+        <h1 class="text-3xl font-bold leading-tight text-black lg:text-4xl md:text-4xl">ĐỊA ĐIỂM NỔI BẬT</h1>
+      </div>
+
+      <!-- Danh sách địa điểm nổi bật -->
+      <section class="max-w-[1440px] container mx-auto px-4 py-12">
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Card 19: Núi LangBiang -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/nuiLB.jpg" alt="Núi LangBiang" class="object-cover w-full h-60">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Núi LangBiang</h3>
+              <p class="p-4 mb-4 text-gray-600 md:p-6">
+                Langbiang – hay núi Langbiang, hay khu du lịch núi Langbiang là hai ngọn núi: Núi Ông và Núi Bà nằm cách thành phố Đà Lạt 12 km thuộc địa phận huyện Lạc Dương.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/nui-langbiang-da-lat/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+          
+          <!-- Card 20: Vườn Hoa Thành Phố Đà Lạt -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/vuonhoa.jpg" alt="Vườn Hoa Thành Phố Đà Lạt" class="object-cover w-full h-60">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Vườn Hoa Thành Phố Đà Lạt</h3>
+              <p class="mb-4 text-gray-600">
+                Với hơn 300 loài hoa khoe sắc quanh năm, vườn hoa Đà Lạt là một trong những điểm đến thu hút rất nhiều du khách gần xa mỗi khi du lịch Đà Lạt.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/vuon-hoa-da-lat/" class="font-medium text-red-500 hover:underline"><br>Xem chi tiết →</a>
+            </div>
+          </div>
+          
+          <!-- Card 21: Đồi Mộng Mơ -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/doimm.jpg" alt="Đồi Mộng Mơ" class="object-cover w-full h-60">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Đồi Mộng Mơ</h3>
+              <p class="mb-4 text-gray-600">
+                Đồi Mộng Mơ là một thắng cảnh thơ mộng của Đà Lạt, mà ngay tên gọi của nó cũng đã nói lên chất “thơ”.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/doi-mong-mo/" class="font-medium text-red-500 hover:underline"><br>Xem chi tiết →</a>
+            </div>
+          </div>
+
+          <!-- Card 22: Vườn thú Đà Lạt ZooDoo -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/vuonthu.jpg" alt="Vườn thú Đà Lạt ZooDoo" class="object-cover w-full h-60">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Vườn thú Đà Lạt ZooDoo</h3>
+              <p class="mb-4 text-gray-600">
+                Cách Đà Lạt gần 40km, Zoodoo không chỉ là sở thú thân thiện theo phong cách Úc mà nơi đây còn phát triển cả mô hình cắm trại giữa đồi thông cực hấp dẫn.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/vuon-thu-da-lat-zoodoo/" class="font-medium text-red-500 hover:underline"><br>Xem chi tiết →</a>
+            </div>
+          </div>
+
+          <!-- Card 24: Trang trại bò sữa Đà Lạt – Dalat Milk Farm -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/ttbs.jpg" alt="Trang trại bò sữa Đà Lạt – Dalat Milk Farm" class="object-cover w-full h-60">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Trang trại bò sữa Đà Lạt – Dalat Milk Farm</h3>
+              <p class="mb-4 text-gray-600">
+                Trang trại bò sữa Đà Lạt – Dalat Milk Farm nằm ở xã Tu Tra, Đơn Dương, cách Đà Lạt tầm 40km, du khách sẽ được tham quan nhà máy và quy trình chế biến sữa.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/trang-trai-bo-sua-da-lat/" class="font-medium text-red-500 hover:underline">Xem chi tiết →</a>
+            </div>
+          </div>
+
+          <!-- Card 25: Ma Rừng Lữ Quán -->
+          <div class="overflow-hidden transition duration-300 bg-white shadow-lg rounded-2xl hover:shadow-xl">
+            <img src="../assets/images/mrlq.jpg" alt="Ma Rừng Lữ Quán" width="350" height="400">
+            <div class="p-6">
+              <h3 class="mb-2 text-xl font-semibold text-gray-800">Ma Rừng Lữ Quán</h3>
+              <p class="mb-4 text-gray-600">
+                Ma Rừng Lữ Quán là khu nghỉ dưỡng nằm sâu trong rừng, thuộc thôn Đạ Nghịt, Xã lát, Huyện Lạc Dương.
+              </p>
+              <a href="https://www.dalattrip.com/dulich/ma-rung-lu-quan/" class="font-medium text-red-500 hover:underline"><br><br>Xem chi tiết →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#F8F8F8] py-24">
+        <div class="max-w-[1440px] container mx-auto text-center">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                <!-- Column 1: DaLatTravel -->
+                <div class="flex flex-col items-center">
+                    <img src="../assets/images/logo.png" alt="DaLatTravel" class="h-8">
+                    <h2 class="mt-2 text-xl font-bold">DaLatTravel</h2>
+                    <div class="mt-4 text-[#4F5665]">
+                        <p>
+                            DaLatTravel đưa bạn đến với những thông tin địa điểm cần thiết khi du lịch Đà Lạt. 
+                            Giúp bạn tìm những tour du lịch phù hợp cho chuyến đi.
+                        </p>
+                        <p class="mt-4 text-[#AFB5C0]">©2025 DaLatTravel</p>
+                    </div>
+                </div>
+
+                <!-- Column 2: Thông tin liên hệ -->
+                <div class="flex flex-col items-center">
+                    <h3 class="mb-4 text-lg font-medium">Thông tin liên hệ</h3>
+                    <ul class="space-y-2 text-[#4F5665]">
+                        <li>
+                            <a href="https://www.dalattrip.com/dulich/" class="hover:text-[#F53855]">
+                                Tour Đà Lạt và du lịch Đà Lạt
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-[#F53855]">
+                                Địa chỉ: 01 Phù Đổng Thiên Vương, phường 8, thành phố Đà Lạt, tỉnh Lâm Đồng
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-[#F53855]">
+                                Điện thoại: 0318.xxx.xxx
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-[#F53855]">
+                                Email: contact@explam.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Liên kết mạng xã hội -->
+                <div class="flex flex-col items-center">
+                    <h3 class="mb-4 text-lg font-medium">Liên kết mạng xã hội</h3>
+                    <div class="flex justify-center gap-4">
+                        <a href="#" class="p-2 transition-all duration-300 bg-red-500 rounded-full shadow-md hover:shadow-lg hover:-translate-y-1">
+                            <img src="../assets/images/facebook.png" alt="Facebook" class="w-4 h-4">
+                        </a>
+                        <a href="#" class="p-2 transition-all duration-300 bg-red-500 rounded-full shadow-md hover:shadow-lg hover:-translate-y-1">
+                            <img src="../assets/images/twitter.png" alt="Twitter" class="w-4 h-4">
+                        </a>
+                        <a href="#" class="p-2 transition-all duration-300 bg-red-500 rounded-full shadow-md hover:shadow-lg hover:-translate-y-1">
+                            <img src="../assets/images/instagram.png" alt="Instagram" class="w-4 h-4">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
+    
+    <!-- js script -->
+    <script src="../js/app.js"></script>
+  </body>
+</html>

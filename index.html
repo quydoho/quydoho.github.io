@@ -13,41 +13,52 @@
       font-family: Arial, sans-serif;
       background: #f2f2f2;
     }
-  
+    /* Cập nhật giao diện cho phần menu */
     nav {
-      background: #333;
-      overflow: hidden;
+      background: linear-gradient(90deg, #333, #555);
+      padding: 10px 0;
     }
     nav ul {
       list-style: none;
       display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
     nav ul li {
-      flex: 1;
       position: relative;
     }
     nav ul li a {
       display: block;
-      padding: 14px 16px;
+      padding: 10px 20px;
       text-align: center;
       text-decoration: none;
       color: #fff;
-      transition: background 0.3s ease;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      /* Màu nền mặc định: gradient xanh tối, hài hòa */
+      background: linear-gradient(45deg, #34a23a, #26a712);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     }
     nav ul li a:hover {
-      background: #575757;
+      /* Khi hover chuyển sang gradient sáng hơn một chút nhưng vẫn tối */
+      background: linear-gradient(45deg, #38b13e, #14a60d);
+      transform: scale(1.1);
     }
     nav ul li a.active {
-      background: #4CAF50;
+      /* Khi active sử dụng màu tương tự hover */
+      background: linear-gradient(45deg, #388e3c, #0f9508);
     }
     nav ul li a::after {
       content: "";
       display: block;
-      width: 0;
-      height: 2px;
-      background: #4CAF50;
+      width: 0%;
+      height: 3px;
+      background: #fff;
       transition: width 0.3s;
       margin: 5px auto 0;
+      border-radius: 2px;
     }
     nav ul li a:hover::after {
       width: 100%;
@@ -56,28 +67,26 @@
 </head>
 <body>
   <br>
-  <h1 style="text-align: center; color: blue;">Github Page dùng để học Thiết kế web</h1><br><hr>
+  <h1 style="text-align: center; color: blue;">Github Page dùng để học Thiết kế web</h1>
+  <br><hr>
+  <!-- Menu được cập nhật -->
   <nav>
     <ul>
       <li><a href="index.html" class="active">Trang Chủ</a></li>
-      <li><a href="Lab 1/index.html">Bài Lab 1</a></li><hr>
-      <li><a href="Lab02/index.html">Bài Lab 2</a></li><hr>
-      <li><a href="Lab03/index.html">Bài Lab 3</a></li><hr>
-      <li><a href="Lab04/index.html">Bài Lab 4</a></li><hr>
-      <li><a href="Lab05/index.html">Bài Lab 5</a></li><hr>
-    </ul>
-    <br>
-    <hr>
-    <br>
-    <ul>
-      <li><a href="Lab06/index.html">Bài Lab 6</a></li><hr>
-      <li><a href="Lab07/index.html">Bài Lab 7</a></li><hr>
-      <li><a href="Lab08/index.html">Bài Lab 8</a></li><hr>
-      <li><a href="Lab09/index.html">Bài Lab 9</a></li><hr>
-      <li><a href="Lab10/index.html">Bài Lab 10</a></li><hr>
-      <li><a href="Lab11/news/index.html">Bài Lab 11</a></li><hr>
-      <li><a href="Lab12/weather/index.html">Bài Lab 12</a></li><hr>
-      <li><a href="thiepmoi_bt7.html">Thiệp mời</a></li><hr>
+      <li><a href="Lab 1/index.html">Bài Lab 1</a></li>
+      <li><a href="Lab02/index.html">Bài Lab 2</a></li>
+      <li><a href="Lab03/index.html">Bài Lab 3</a></li>
+      <li><a href="Lab04/index.html">Bài Lab 4</a></li>
+      <li><a href="Lab05/index.html">Bài Lab 5</a></li>
+      <li><a href="Lab06/index.html">Bài Lab 6</a></li>
+      <li><a href="Lab07/index.html">Bài Lab 7</a></li>
+      <li><a href="Lab08/index.html">Bài Lab 8</a></li>
+      <li><a href="Lab09/index.html">Bài Lab 9</a></li>
+      <li><a href="Lab10/index.html">Bài Lab 10</a></li>
+      <li><a href="Lab11/news/index.html">Bài Lab 11</a></li>
+      <li><a href="Lab12/weather/index.html">Bài Lab 12</a></li>
+      <li><a href="thiepmoi_bt7.html">Thiệp mời</a></li>
+      <li><a href="Giuaky_nhom1/FINAL_NHOM 1_TAILWIND CSS_GIOI THIEU TRANG WEB DU LICH_DA LAT/src/pages/index.html">DaLatTravel - BÁO CÁO GIỮA KÌ</a></li>
     </ul>
   </nav>
 
