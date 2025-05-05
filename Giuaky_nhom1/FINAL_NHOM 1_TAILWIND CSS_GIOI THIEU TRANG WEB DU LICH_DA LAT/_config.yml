@@ -1,3 +1,4 @@
+cache_dir: "cache"
 exclude:
   - node_modules
   - package.json
