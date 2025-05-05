@@ -51,14 +51,15 @@ const testimonials = [
     }
 ];
 
-// Initialize Swiper
+// Initialize Swiper với cấu hình responsive
 const swiper = new Swiper('.testimonialSwiper', {
+    // Cấu hình mặc định cho mobile
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 10,
     loop: true,
     pagination: {
         el: '.swiper-pagination',
-        clickable: true, // Make pagination clickable
+        clickable: true, // Cho phép click vào pagination dots
         renderBullet: function (index, className) {
             return '<span class="' + className + '"></span>';
         },
@@ -67,14 +68,19 @@ const swiper = new Swiper('.testimonialSwiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    // Responsive breakpoints
+    // Cấu hình responsive theo các breakpoint
     breakpoints: {
-        // when window width is >= 768px
+        // Khi độ rộng cửa sổ >= 480px (Thiết bị mobile lớn hơn)
+        480: {
+            slidesPerView: 1,
+            spaceBetween: 15
+        },
+        // Khi độ rộng cửa sổ >= 768px (Máy tính bảng)
         768: {
             slidesPerView: 2,
-            spaceBetween: 30
+            spaceBetween: 20
         },
-        // when window width is >= 1024px
+        // Khi độ rộng cửa sổ >= 1024px (Máy tính để bàn)
         1024: {
             slidesPerView: 3,
             spaceBetween: 30
@@ -82,17 +88,19 @@ const swiper = new Swiper('.testimonialSwiper', {
     }
 });
 
-// Generate testimonial slides
+// Hàm tạo các slide đánh giá dựa trên dữ liệu testimonials
 function generateTestimonials() {
     const swiperWrapper = document.querySelector('.swiper-wrapper');
     
     testimonials.forEach(testimonial => {
+        // Tạo một phần tử slide mới
         const slide = document.createElement('div');
         slide.className = 'swiper-slide';
         
+        // Chèn nội dung đánh giá vào slide
         slide.innerHTML = `
             <div class="p-8 border-2 border-black rounded-2xl hover:border-blue-500 transition-all">
-                <div class="flex items-center justify-between mb-8">
+                <div class="flex flex-col sm:flex-row items-center justify-between mb-8">
                     <div class="flex items-center gap-4">
                         <img src="${testimonial.image}" alt="${testimonial.name}" class="w-12 h-12 rounded-full">
                         <div>
@@ -100,7 +108,7 @@ function generateTestimonials() {
                             <p class="text-gray-600">${testimonial.location}</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 mt-4 sm:mt-0">
                         <span class="font-medium">${testimonial.rating}</span>
                         <img src="../assets/images/star.png" alt="star" class="w-4 h-4">
                     </div>
@@ -112,4 +120,6 @@ function generateTestimonials() {
         swiperWrapper.appendChild(slide);
     });
 }
+
+// Khởi tạo việc tạo slide ngay khi DOM sẵn sàng
 document.addEventListener('DOMContentLoaded', generateTestimonials);

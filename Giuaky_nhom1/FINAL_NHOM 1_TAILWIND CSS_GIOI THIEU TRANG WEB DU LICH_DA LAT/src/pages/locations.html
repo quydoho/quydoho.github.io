@@ -48,22 +48,58 @@
           <a href="index.html" class="text-gray-600 hover:text-gray-900">DaLatTravel</a>
         </div>
 
-        <!-- Menu Items -->
-        <div class="hidden space-x-8 md:flex">
+        <!-- Desktop Menu -->
+        <div class="items-center hidden gap-8 md:flex">
           <a href="#home" class="text-gray-600 hover:text-gray-900">Trang chủ</a>
-          <a href="#fall" class="text-gray-600 hover:text-gray-900">Thác nước Đà Lạt</a>
-          <a href="#lake" class="text-gray-600 hover:text-gray-900">Thung lũng Đà Lạt</a>
-          <a href="#located" class="text-gray-600 hover:text-gray-900">Khu du lịch Đà Lạt mới</a>
-          <a href="#special" class="text-gray-600 hover:text-gray-900">Địa điểm nổi bật</a>
+          <a href="#fall" class="text-gray-600 hover:text-gray-900">Thác nước</a>
+          <a href="#lake" class="text-gray-600 hover:text-gray-900">Thung lũng</a>
+          <a href="#located" class="text-gray-600 hover:text-gray-900">Khu du lịch mới</a>
+          <a href="#special" class="text-gray-600 hover:text-gray-900">Nổi bật</a>
+          <!-- Mục Feedback -->
+          <a href="#feedback" class="text-gray-600 hover:text-gray-900">Feedback</a>
         </div>
 
-        <!-- Auth Buttons -->
-        <div class="space-x-4">
+        <!-- Auth Buttons (Desktop) -->
+        <div class="items-center hidden gap-4 md:flex">
           <button class="text-gray-600 hover:text-gray-900">Sign In</button>
-          <button class="px-4 py-2 text-white bg-red-500 rounded-full">Sign Up</button>
+          <button class="px-4 py-2 text-white bg-red-500 rounded-full hover:bg-red-600">Sign Up</button>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+          <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <nav class="px-4 py-4 space-y-4 bg-white shadow-md">
+          <a href="#home" class="block text-gray-600 hover:text-gray-900">Trang chủ</a>
+          <a href="#fall" class="block text-gray-600 hover:text-gray-900">Thác nước</a>
+          <a href="#lake" class="block text-gray-600 hover:text-gray-900">Thung lũng</a>
+          <a href="#located" class="block text-gray-600 hover:text-gray-900">Khu du lịch mới</a>
+          <a href="#special" class="block text-gray-600 hover:text-gray-900">Nổi bật</a>
+          <a href="contact.html" class="block text-gray-600 hover:text-gray-900">Feedback</a>
+          <!-- Auth Buttons (Mobile) -->
+          <div class="flex flex-col gap-2 mt-4">
+            <button class="text-left text-gray-600 hover:text-gray-900">Sign In</button>
+            <button class="px-4 py-2 text-left text-white bg-red-500 rounded-full hover:bg-red-600">Sign Up</button>
+          </div>
+        </nav>
+      </div>
     </header>
+
+    <script>
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
 
     <!-- hero section  -->
     <section class="max-w-[1440px] container mx-auto px-4 py-24 flex flex-col md:flex-row items-center gap-12" id="home"
@@ -75,8 +111,8 @@
         </h1>
       </div>
       <!-- Testimonials Slider -->
-      <div class="swiper testimonialSwiper">
-        <div class="swiper-wrapper">
+      <div class="w-full mx-auto swiper testimonialSwiper md:w-3/4 lg:w-1/2">
+        <div class="swiper-wrapper min-h-[200px] md:min-h-[300px] lg:min-h-[400px]">
           <!-- Testimonials will be inserted here by JavaScript -->
         </div>
 
